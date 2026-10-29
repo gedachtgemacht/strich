@@ -1,95 +1,103 @@
 # strich.
 
-**Striche setzen, am Monatsende fair abrechnen.** strich. ist die Getränke-Strichliste für WG, Verein und Büro.
+**Tap a tally mark, settle up fairly at the end of the month.** strich. is the drinks tally sheet for shared flats, clubs and offices.
 
-Die Papierliste am Kühlschrank wird unleserlich, geht verloren und muss am Monatsende von Hand zusammengezählt werden. Bezahlte Apps wollen ein Abo, ein Konto oder Internet, offene Lösungen einen eigenen Server. strich. läuft auf einem alten Tablet oder Handy am Kühlschrank: Person antippen, Getränk antippen, fertig. Die Summen rechnet die App.
+It replaces the paper tally list on the fridge: an old tablet or phone runs the app, people tap their name and their drink, and strich. adds up who owes what. It is an offline PWA with no account and no server, and the data stays on the device.
 
-Reine Rechnung in ganzen Cent, keine KI, kein Server. Alles bleibt auf deinem Gerät.
+![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue) ![PWA](https://img.shields.io/badge/PWA-installable-5a4fcf) ![Offline](https://img.shields.io/badge/offline-yes-2e7d32) ![No dependencies](https://img.shields.io/badge/dependencies-none-lightgrey)
+
+The app interface is in German.
+
+The paper list on the fridge gets unreadable, gets lost and has to be added up by hand at the end of the month. Paid apps want a subscription, an account or internet, open-source ones need their own server. strich. runs on an old tablet or phone by the fridge: tap the person, tap the drink, done. The app does the totals.
+
+Plain arithmetic in whole cents, no AI, no server. Everything stays on your device.
 
 <p align="center">
-  <img src="bilder/1-uebersicht.png" width="240" alt="">
+  <img src="bilder/1-uebersicht.png" width="240" alt="Phone view of the empty start screen with buttons to add a person, load the example or open an invitation">
 </p>
 <p align="center">
-  <img src="bilder/2-breit.png" width="640" alt="">
+  <img src="bilder/2-breit.png" width="640" alt="Desktop view of the same start screen with the navigation at the top">
 </p>
 
-## Warum
+## Why
 
-Es gibt Strichlisten-Apps, die zählen und abrechnen können, zum Beispiel Strichliste: Getränke Zähler, Getränkewart 2.0 oder bierliste.at. Sie kosten Geld, setzen teils ein Konto und Internet voraus, und keine ist zugleich offen, offline und ohne Konto. strich. ist genau das: ein Werkzeug, ein Job.
+There are tally apps that can count and settle up, for example Strichliste: Getränke Zähler, Getränkewart 2.0 or bierliste.at. They cost money, some require an account and internet, and none of them is open source, offline and account-free at the same time. strich. is exactly that: one tool, one job.
 
-## Funktionen
+## Features
 
-- **Personen** anlegen, umbenennen und archivieren. Archivierte Personen tauchen beim Strichesetzen nicht mehr auf, bleiben aber in der Abrechnung, wenn sie noch offene Striche haben
-- **Getränke** mit Name und Preis in Euro, der Preis ist jederzeit änderbar, die Reihenfolge einstellbar
-- **Preisvorschlag aus der Kiste**: Kistenpreis und Flaschenzahl eingeben, strich. rundet den Preis pro Flasche auf 5 oder 10 Cent auf und zeigt den ungerundeten Wert dazu
-- **Strich setzen**: Person antippen, Getränk antippen. Danach zehn Sekunden lang "rückgängig"
-- **Verlauf pro Person** mit Storno für einzelne Striche
-- **Abrechnung** für alle offenen Striche oder einen gewählten Zeitraum: Summe pro Person und gesamt, aufklappbar nach Getränk
-- **Abschließen**: die offenen Striche gehören danach diesem Abschluss, pro Person lässt sich "bezahlt" abhaken
-- **Export** der Abrechnung als CSV für deutsches Excel (Semikolon, Dezimalkomma)
-- **Mehrere Handys am selben Abend**: Einladungslink teilen, die anderen öffnen ihn und haben dieselben Personen, Getränke und offenen Striche. Jedes Handy setzt seine eigenen Striche, vor dem Abrechnen schicken alle ihren Link zurück. strich. führt ohne Doppelte zusammen, Stornos wandern mit
-- **Sicherung** aller Daten als JSON-Datei, Import auf einem anderen Gerät mit Vorschau vor dem Ersetzen
-- **Beispieldaten** (erfundene Personen und Getränke, als `beispiel` markiert) mit einem Klick wieder entfernbar, nach Rückfrage. Deine eigenen Striche bleiben dabei erhalten, auch wenn sie auf einem Beispielgetränk oder einer Beispielperson liegen
-- Hell und dunkel, funktioniert offline, installierbar als App
+- **People:** add, rename and archive. Archived people no longer show up when tapping marks, but stay in the settlement while they still have open marks
+- **Drinks** with name and price in euros; the price can be changed at any time, the order is adjustable
+- **Price suggestion from the crate:** enter the crate price and bottle count, strich. rounds the price per bottle up to 5 or 10 cents and shows the unrounded value next to it
+- **Add a mark:** tap the person, tap the drink. For ten seconds afterwards you can tap "rückgängig" ("undo")
+- **History per person** with cancellation of single marks
+- **Settlement** for all open marks or a chosen period: total per person and overall, expandable by drink
+- **Close out:** the open marks then belong to this closing, and each person can be ticked off as "bezahlt" ("paid")
+- **Export** of the settlement as CSV for German Excel (semicolon, decimal comma)
+- **Several phones on the same evening:** share an invitation link; the others open it and get the same people, drinks and open marks. Each phone adds its own marks, and before settling up everyone sends their link back. strich. merges without duplicates, cancellations travel along
+- **Backup** of all data as a JSON file, import on another device with a preview before replacing
+- **Sample data** (made-up people and drinks, marked as `beispiel` ("example")), removable with one click after a confirmation. Your own marks are kept, even if they are on a sample drink or a sample person
+- Light and dark mode, works offline, installable as an app
 
-## Datenschutz
+## Privacy
 
-Nichts verlässt dein Gerät. strich. hat keinen Server, kein Konto, keine Analyse, keine Werbung und lädt nichts aus dem Netz nach. Personen, Getränke und Striche liegen nur in der lokalen Datenbank deines Browsers (IndexedDB). Exporte und Sicherungen entstehen nur, wenn du sie selbst auslöst.
+Nothing leaves your device. strich. has no server, no account, no analytics, no ads and loads nothing from the network. People, drinks and marks are stored only in your browser's local database (IndexedDB). Exports and backups are only created when you trigger them yourself.
 
-Der Einladungslink trägt den offenen Stand selbst, gepackt hinter dem `#` der Adresse. Dieser Teil geht beim Öffnen nicht an den Server, auf dem strich. liegt. Den Link verschickst du aber selbst, etwa über einen Messenger, und wer ihn hat, sieht Namen und Striche. Schick ihn deshalb nur an die Runde.
+The invitation link carries the open state itself, packed behind the `#` of the address. This part is not sent to the server strich. is hosted on when the link is opened. But you send the link yourself, for example via a messenger, and anyone who has it can see names and marks. So only send it to the group.
 
-Weil die Daten nur im Browser liegen: Wer die Websitedaten löscht oder das Gerät verliert, verliert auch die Liste. Mach deshalb ab und zu eine Sicherung. strich. fragt beim Browser nach dauerhaftem Speicher und zeigt dir das Datum der letzten Sicherung.
+Because the data lives only in the browser: if you clear the site data or lose the device, you lose the list too. Make a backup now and then. strich. asks the browser for persistent storage and shows you the date of the last backup.
 
-Grenzen, bewusst wie bei der Papierliste:
+Limits, deliberately the same as with the paper list:
 
-- Jeder am Gerät kann bei jedem Striche setzen. Es gibt keine PIN und keine Rechte pro Person
-- Kein Live-Abgleich: Die Handys gleichen sich nur ab, wenn jemand einen Link öffnet. Ein Server, der alles ständig verteilt, widerspräche dem Grundsatz, dass alles auf dem Gerät bleibt
-- Kein eigenes Konto pro Person, der Link ist kein Zugang mit Rechten
-- Abrechnen geht auf einem Handy. Die anderen zeigen danach weiter ihre alten offenen Summen an, ein abgeschlossener Stand wandert nicht mit
-- Ist strich. auf dem iPhone als App installiert, öffnet ein angetippter Link den Browser und nicht die App. Dann den Link kopieren und in der App unter "mehrere handys" einfügen
-- Für den Umzug auf ein neues Gerät gibt es Export und Import
-- Keine Bestandsverwaltung, keine Online-Bezahlung, keine Bankanbindung
+- Anyone at the device can add marks for anyone. There is no PIN and no per-person permissions
+- No live sync: the phones only sync when someone opens a link. A server that constantly distributes everything would contradict the principle that everything stays on the device
+- No personal account per person; the link is not an access with permissions
+- Settling up happens on one phone. The others keep showing their old open totals afterwards; a closed state does not travel along
+- If strich. is installed as an app on an iPhone, tapping a link opens the browser, not the app. Copy the link and paste it in the app under "mehrere handys" ("several phones")
+- For moving to a new device there is export and import
+- No stock management, no online payment, no bank connection
 
-## Installation
+## Install
 
-strich. ist eine statische Web-App. Es gibt keinen Build-Schritt und keine Abhängigkeiten.
+strich. is a static web app. There is no build step and there are no dependencies.
 
-1. Den Ordner `strich/` auf einen beliebigen statischen Host legen (eigener Webspace, GitHub Pages, Netlify, ein Raspberry Pi). Für die Installation als App ist HTTPS nötig.
-2. Die Adresse im Browser des Tablets oder Handys öffnen.
-3. Im Browsermenü **Zum Startbildschirm hinzufügen** wählen. Danach startet strich. wie eine App und funktioniert auch ohne Netz.
+1. Put the `strich/` folder on any static host (your own web space, GitHub Pages, Netlify, a Raspberry Pi). Installing it as an app needs HTTPS.
+2. Open the address in the browser of the tablet or phone.
+3. In the browser menu choose **Zum Startbildschirm hinzufügen** ("Add to Home Screen"). After that strich. starts like an app and also works without a network.
 
-Lokal testen:
+Test locally:
 
 ```
 cd strich
 python3 -m http.server 8000
 ```
 
-Dann `http://localhost:8000` im Browser öffnen.
+Then open `http://localhost:8000` in your browser.
 
-## Wie gerechnet wird
+## How the math works
 
-**1. Striche in Cent.** Jeder Strich speichert den Preis, der beim Setzen galt. Eine spätere Preisänderung verändert alte Striche nicht. Alle Beträge sind ganze Cent, es gibt keine Schätzung und damit auch keine Spanne.
+**1. Marks in cents.** Each mark stores the price that applied when it was added. A later price change does not change old marks. All amounts are whole cents; there is no estimate and therefore no range.
 
-**2. Summe pro Person.** Summe der Preise aller nicht stornierten Striche. Stornierte zählen nicht.
-Beispiel: 3 × Wasser zu 80 ct und 2 × Bier zu 120 ct ergeben 240 + 240 = 480 ct = 4,80 €.
+**2. Total per person.** Sum of the prices of all marks that are not cancelled. Cancelled marks do not count.
+Example: 3 × water at 80 ct and 2 × beer at 120 ct give 240 + 240 = 480 ct = €4.80.
 
-**3. Preisänderung und Storno.** Zwei Bier zu 120 ct, dann Preis auf 150 ct, danach zwei Bier zu 150 ct, davon eins storniert: 2 × 120 + 1 × 150 = 390 ct = 3,90 €. Zusammen mit dem Beispiel oben: 870 ct = 8,70 €.
+**3. Price change and cancellation.** Two beers at 120 ct, then the price goes to 150 ct, then two beers at 150 ct, one of them cancelled: 2 × 120 + 1 × 150 = 390 ct = €3.90. Together with the example above: 870 ct = €8.70.
 
-**4. Abrechnung.** Pro Person und Getränk Anzahl und Summe, dazu die Gesamtsumme. Beim Abschließen werden nur offene, nicht stornierte Striche im gewählten Zeitraum dem Abschluss zugeordnet.
+**4. Settlement.** Count and total per person and drink, plus the grand total. When closing out, only open, non-cancelled marks within the chosen period are assigned to the closing.
 
-**5. Preisvorschlag.** Preis pro Flasche = Kistenpreis ÷ Anzahl, aufgerundet auf 5 oder 10 Cent, damit die Kasse nicht ins Minus läuft. Das ist der einzige gerundete Wert, und die App zeigt den ungerundeten dazu.
-Beispiel: Kiste 18,99 €, 20 Flaschen: 94,95 ct pro Flasche, auf 5 ct gerundet 95 ct, auf 10 ct gerundet 100 ct.
+**5. Price suggestion.** Price per bottle = crate price ÷ count, rounded up to 5 or 10 cents so the cash box does not go negative. This is the only rounded value, and the app shows the unrounded one next to it.
+Example: crate €18.99, 20 bottles: 94.95 ct per bottle, rounded to 5 ct gives 95 ct, rounded to 10 ct gives 100 ct.
 
-**6. Mehrere Handys.** Jeder Strich hat eine zufällige Kennung. Beim Zusammenführen kommen nur Striche, Personen und Getränke dazu, deren Kennung das Handy noch nicht kennt. Ein Storno wandert mit, solange der Strich noch offen ist, und wird nie zurückgenommen. Bekannte Personen und Getränke behalten ihren Stand auf dem Handy. Denselben Link zweimal zu öffnen ändert nichts.
-Beispiel: Handy 1 hat Anna 1 Bier (120 ct) und lädt Handy 2 ein. Danach setzt Handy 2 für Ben 2 Wasser und für Anna 1 Wasser (je 80 ct), Handy 1 für Ben 1 Bier. Handy 2 schickt seinen Link zurück: Anna 120 + 80 = 200 ct, Ben 120 + 160 = 280 ct, gesamt 480 ct. Storniert Handy 2 danach ein Wasser von Ben und schickt erneut, sind es 400 ct, und nach dem Link von Handy 1 zeigt auch Handy 2 400 ct.
+**6. Several phones.** Each mark has a random ID. When merging, only marks, people and drinks whose ID the phone does not know yet are added. A cancellation travels along as long as the mark is still open, and is never reversed. Known people and drinks keep their state on the phone. Opening the same link twice changes nothing.
+Example: phone 1 has 1 beer (120 ct) for Anna and invites phone 2. Then phone 2 adds 2 waters for Ben and 1 water for Anna (80 ct each), phone 1 adds 1 beer for Ben. Phone 2 sends its link back: Anna 120 + 80 = 200 ct, Ben 120 + 160 = 280 ct, total 480 ct. If phone 2 then cancels one of Ben's waters and sends again, it is 400 ct, and after the link from phone 1, phone 2 also shows 400 ct.
 
-Die Rechenfunktionen liegen als reine Funktionen in `src/rechnen.js` und `src/abgleich.js` und sind mit `node test-calc.js` gegen diese Handrechnungen getestet.
+The calculations are pure functions in `src/rechnen.js` and `src/abgleich.js` and are tested with `node test-calc.js` against these hand calculations.
 
-## Lizenz
+## License
 
-GNU Affero General Public License v3.0 (AGPL-3.0), siehe `LICENSE`.
+GNU Affero General Public License v3.0 (AGPL-3.0), see `LICENSE`.
+
+**Deutsch:** strich. ist eine digitale Strichliste und Getränkeliste für WG, Verein und Büro, mit Getränkekasse-Abrechnung pro Person und CSV-Export, offline und ohne Konto.
 
 ---
 
-**gedacht.gemacht.** Kleine, ehrliche Software. Alles bleibt auf deinem Gerät.
+**gedacht.gemacht.** Small, honest software. Everything stays on your device. · [More projects](https://github.com/gedachtgemacht)
