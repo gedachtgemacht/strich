@@ -6,6 +6,8 @@ It replaces the paper tally list on the fridge: an old tablet or phone runs the 
 
 ![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue) ![PWA](https://img.shields.io/badge/PWA-installable-5a4fcf) ![Offline](https://img.shields.io/badge/offline-yes-2e7d32) ![No dependencies](https://img.shields.io/badge/dependencies-none-lightgrey)
 
+**Try it:** https://gedachtgemacht.github.io/strich/ (works in any phone browser, install via "Add to Home Screen")
+
 The app interface is in German.
 
 The paper list on the fridge gets unreadable, gets lost and has to be added up by hand at the end of the month. Paid apps want a subscription, an account or internet, open-source ones need their own server. strich. runs on an old tablet or phone by the fridge: tap the person, tap the drink, done. The app does the totals.
